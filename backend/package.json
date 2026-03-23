@@ -1,0 +1,16 @@
+{
+  "name": "ferret-dashboard-backend",
+  "version": "1.0.0",
+  "description": "Backend for Ferret Office Dashboard, handling task status updates and WebSocket communication.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "ws": "^8.13.0"
+  }
+}

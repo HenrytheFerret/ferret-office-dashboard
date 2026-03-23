@@ -1,0 +1,271 @@
+<svg width="3072" height="768" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3072 768">
+  <defs>
+    <style>
+      /* Master Retro Pokémon Style Ferret Sheet - All 8 Agents */
+      .bg { fill: #1e1e2e; }
+      
+      /* Kevin (Blue) */
+      .kevin-main { fill: #7aa2f7; }
+      .kevin-dark { fill: #3d59a1; }
+      .kevin-light { fill: #cdd6f4; }
+      .kevin-belly { fill: #f2d5cf; }
+      
+      /* Alex (Orange) */
+      .alex-main { fill: #f5a97f; }
+      .alex-dark { fill: #c65d32; }
+      .alex-light { fill: #f9e2af; }
+      .alex-belly { fill: #fde4d3; }
+      
+      /* Jordan (Pink) */
+      .jordan-main { fill: #f5bde6; }
+      .jordan-dark { fill: #c678dd; }
+      .jordan-light { fill: #f2cdcd; }
+      .jordan-belly { fill: #fef5f7; }
+      
+      /* Milo (Teal) */
+      .milo-main { fill: #94e2d5; }
+      .milo-dark { fill: #2d8f74; }
+      .milo-light { fill: #d9f0d8; }
+      .milo-belly { fill: #e8f8f5; }
+      
+      /* Riley (Purple) */
+      .riley-main { fill: #cba6f7; }
+      .riley-dark { fill: #8b5cf6; }
+      .riley-light { fill: #e9d5ff; }
+      .riley-belly { fill: #f3e8ff; }
+      
+      /* Casey (Yellow) */
+      .casey-main { fill: #f9e2af; }
+      .casey-dark { fill: #d4a017; }
+      .casey-light { fill: #fef3c7; }
+      .casey-belly { fill: #fffacd; }
+      
+      /* Sam (Cyan) */
+      .sam-main { fill: #89dceb; }
+      .sam-dark { fill: #3a86a8; }
+      .sam-light { fill: #d6f4ff; }
+      .sam-belly { fill: #e0f7ff; }
+      
+      /* Quinn (Pink-Red) */
+      .quinn-main { fill: #f38ba8; }
+      .quinn-dark { fill: #be4b6c; }
+      .quinn-light { fill: #fad3dc; }
+      .quinn-belly { fill: #fce4ec; }
+      
+      /* Universal styles */
+      .outline { stroke: #11111b; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .eye { fill: #11111b; }
+      .eye-shine { fill: #ffffff; }
+      .nose { fill: #f9e2af; }
+      .mouth { fill: none; stroke: #11111b; stroke-width: 1; stroke-linecap: round; }
+      
+      text { font-family: monospace; font-size: 12px; fill: #bac2de; font-weight: bold; }
+      .frame-label { font-size: 10px; fill: #a6adc8; }
+    </style>
+  </defs>
+
+  <!-- TITLE -->
+  <text x="16" y="24">FERRET TEAM - Retro Pokémon Style Sprites (All 8 Agents)</text>
+
+  <!-- ===== AGENT 1: KEVIN (Blue) ===== -->
+  <g id="kevin-sheet">
+    <text x="16" y="60">KEVIN (Blue) - Tech Lead</text>
+    
+    <!-- Frame 1: idle_default -->
+    <g>
+      <rect x="16" y="76" width="64" height="64" class="bg" />
+      <rect x="24" y="116" width="8" height="12" rx="2" class="kevin-main outline" />
+      <rect x="48" y="116" width="8" height="12" rx="2" class="kevin-main outline" />
+      <rect x="22" y="88" width="40" height="28" rx="4" class="kevin-main outline" />
+      <ellipse cx="42" cy="100" rx="14" ry="12" class="kevin-belly" />
+      <circle cx="42" cy="72" r="14" class="kevin-main outline" />
+      <rect x="28" y="50" width="8" height="14" rx="2" class="kevin-main outline" />
+      <rect x="50" y="50" width="8" height="14" rx="2" class="kevin-main outline" />
+      <rect x="29" y="54" width="6" height="8" rx="1" class="kevin-light" />
+      <rect x="51" y="54" width="6" height="8" rx="1" class="kevin-light" />
+      <circle cx="34" cy="68" r="2.5" class="eye" />
+      <circle cx="50" cy="68" r="2.5" class="eye" />
+      <circle cx="35" cy="66" r="1" class="eye-shine" />
+      <circle cx="51" cy="66" r="1" class="eye-shine" />
+      <circle cx="42" cy="74" r="2" class="nose" />
+      <path d="M 42 78 Q 39 82 36 80" class="mouth" />
+      <rect x="24" y="108" width="8" height="12" rx="2" class="kevin-main outline" />
+      <rect x="48" y="108" width="8" height="12" rx="2" class="kevin-main outline" />
+      <path d="M 58 96 Q 70 90 72 102" class="kevin-main outline" stroke-width="5" fill="none" />
+    </g>
+    
+    <!-- Frame 2: idle_default (bob) -->
+    <g>
+      <rect x="96" y="76" width="64" height="64" class="bg" />
+      <rect x="104" y="114" width="8" height="12" rx="2" class="kevin-main outline" />
+      <rect x="128" y="114" width="8" height="12" rx="2" class="kevin-main outline" />
+      <rect x="102" y="86" width="40" height="28" rx="4" class="kevin-main outline" />
+      <ellipse cx="122" cy="98" rx="14" ry="12" class="kevin-belly" />
+      <circle cx="122" cy="70" r="14" class="kevin-main outline" />
+      <rect x="108" y="48" width="8" height="14" rx="2" class="kevin-main outline" />
+      <rect x="130" y="48" width="8" height="14" rx="2" class="kevin-main outline" />
+      <rect x="109" y="52" width="6" height="8" rx="1" class="kevin-light" />
+      <rect x="131" y="52" width="6" height="8" rx="1" class="kevin-light" />
+      <circle cx="114" cy="66" r="2.8" class="eye" />
+      <circle cx="130" cy="66" r="2.8" class="eye" />
+      <circle cx="115" cy="64" r="1.2" class="eye-shine" />
+      <circle cx="131" cy="64" r="1.2" class="eye-shine" />
+      <circle cx="122" cy="72" r="2" class="nose" />
+      <path d="M 122 76 Q 120 80 118 78" class="mouth" />
+      <path d="M 138 94 Q 150 86 152 100" class="kevin-main outline" stroke-width="5" fill="none" />
+    </g>
+
+    <!-- Frame 3: move_walk (stride) -->
+    <g>
+      <rect x="176" y="76" width="64" height="64" class="bg" />
+      <rect x="184" y="116" width="8" height="12" rx="2" class="kevin-main outline" />
+      <rect x="208" y="114" width="8" height="14" rx="2" class="kevin-main outline" />
+      <rect x="182" y="88" width="40" height="28" rx="4" class="kevin-main outline" />
+      <ellipse cx="202" cy="100" rx="14" ry="12" class="kevin-belly" />
+      <circle cx="202" cy="72" r="14" class="kevin-main outline" />
+      <rect x="188" y="50" width="8" height="14" rx="2" class="kevin-main outline" />
+      <rect x="210" y="50" width="8" height="14" rx="2" class="kevin-main outline" />
+      <circle cx="194" cy="68" r="2.5" class="eye" />
+      <circle cx="210" cy="68" r="2.5" class="eye" />
+      <circle cx="202" cy="74" r="2" class="nose" />
+      <path d="M 202 78 Q 200 82 198 80" class="mouth" />
+      <path d="M 218 96 Q 228 92 232 104" class="kevin-main outline" stroke-width="5" fill="none" />
+    </g>
+    
+    <!-- Frame 4: working_desk -->
+    <g>
+      <rect x="256" y="76" width="64" height="64" class="bg" />
+      <rect x="272" y="108" width="48" height="12" rx="2" class="kevin-dark outline" fill="#6b513d" />
+      <rect x="270" y="96" width="40" height="20" rx="3" class="kevin-main outline" />
+      <circle cx="290" cy="76" r="13" class="kevin-main outline" />
+      <rect x="276" y="52" width="8" height="12" rx="2" class="kevin-main outline" />
+      <rect x="300" y="52" width="8" height="12" rx="2" class="kevin-main outline" />
+      <circle cx="284" cy="72" r="2" class="eye" />
+      <circle cx="296" cy="72" r="2" class="eye" />
+      <circle cx="290" cy="80" r="1.5" class="nose" />
+      <path d="M 290 82 Q 288 84 286 82" class="mouth" />
+      <rect x="272" y="114" width="8" height="8" rx="1" class="kevin-main outline" />
+      <rect x="298" y="114" width="8" height="8" rx="1" class="kevin-main outline" />
+      <path d="M 308 100 Q 316 98 320 108" class="kevin-main outline" stroke-width="4" fill="none" />
+      <rect x="276" y="100" width="28" height="8" rx="1" fill="#89b4fa" opacity="0.8" />
+    </g>
+  </g>
+
+  <!-- ===== AGENT 2: ALEX (Orange) ===== -->
+  <g id="alex-sheet">
+    <text x="400" y="60">ALEX (Orange) - Frontend Dev</text>
+    
+    <!-- Frame 1: idle_default -->
+    <g>
+      <rect x="400" y="76" width="64" height="64" class="bg" />
+      <rect x="408" y="116" width="8" height="12" rx="2" class="alex-main outline" />
+      <rect x="432" y="116" width="8" height="12" rx="2" class="alex-main outline" />
+      <rect x="406" y="88" width="40" height="28" rx="4" class="alex-main outline" />
+      <ellipse cx="426" cy="100" rx="14" ry="12" class="alex-belly" />
+      <circle cx="426" cy="72" r="14" class="alex-main outline" />
+      <rect x="412" y="50" width="8" height="14" rx="2" class="alex-main outline" />
+      <rect x="434" y="50" width="8" height="14" rx="2" class="alex-main outline" />
+      <rect x="413" y="54" width="6" height="8" rx="1" class="alex-light" />
+      <rect x="435" y="54" width="6" height="8" rx="1" class="alex-light" />
+      <circle cx="418" cy="68" r="2.5" class="eye" />
+      <circle cx="434" cy="68" r="2.5" class="eye" />
+      <circle cx="419" cy="66" r="1" class="eye-shine" />
+      <circle cx="435" cy="66" r="1" class="eye-shine" />
+      <circle cx="426" cy="74" r="2" class="nose" />
+      <path d="M 426 78 Q 423 82 420 80" class="mouth" />
+      <rect x="408" y="108" width="8" height="12" rx="2" class="alex-main outline" />
+      <rect x="432" y="108" width="8" height="12" rx="2" class="alex-main outline" />
+      <path d="M 442 96 Q 454 90 456 102" class="alex-main outline" stroke-width="5" fill="none" />
+    </g>
+
+    <!-- Frame 2: celebrate (jumping) -->
+    <g>
+      <rect x="480" y="76" width="64" height="64" class="bg" />
+      <rect x="488" y="100" width="8" height="12" rx="2" class="alex-main outline" />
+      <rect x="512" y="100" width="8" height="12" rx="2" class="alex-main outline" />
+      <rect x="486" y="72" width="40" height="28" rx="4" class="alex-main outline" />
+      <ellipse cx="506" cy="82" rx="14" ry="12" class="alex-belly" />
+      <circle cx="506" cy="54" r="14" class="alex-main outline" />
+      <rect x="492" y="32" width="8" height="14" rx="2" class="alex-main outline" />
+      <rect x="514" y="32" width="8" height="14" rx="2" class="alex-main outline" />
+      <circle cx="498" cy="50" r="3" class="eye" />
+      <circle cx="514" cy="50" r="3" class="eye" />
+      <circle cx="499" cy="48" r="1.2" class="eye-shine" />
+      <circle cx="515" cy="48" r="1.2" class="eye-shine" />
+      <circle cx="506" cy="56" r="2" class="nose" />
+      <path d="M 506 60 Q 504 64 502 62" class="mouth" />
+      <!-- Sparkles -->
+      <circle cx="490" cy="35" r="2" class="alex-light" />
+      <circle cx="520" cy="40" r="2" class="alex-light" />
+      <path d="M 522 78 Q 532 70 536 84" class="alex-main outline" stroke-width="5" fill="none" />
+    </g>
+
+    <!-- Frame 3: anxious_pace (worried) -->
+    <g>
+      <rect x="560" y="76" width="64" height="64" class="bg" />
+      <rect x="568" y="118" width="8" height="10" rx="2" class="alex-main outline" />
+      <rect x="590" y="120" width="8" height="8" rx="2" class="alex-main outline" />
+      <rect x="566" y="90" width="40" height="26" rx="3" class="alex-main outline" />
+      <ellipse cx="586" cy="100" rx="14" ry="11" class="alex-belly" />
+      <circle cx="586" cy="74" r="13" class="alex-main outline" />
+      <rect x="572" y="52" width="7" height="12" rx="2" class="alex-main outline" />
+      <rect x="593" y="52" width="7" height="12" rx="2" class="alex-main outline" />
+      <circle cx="580" cy="70" r="2.2" class="eye" />
+      <circle cx="592" cy="70" r="2.2" class="eye" />
+      <circle cx="586" cy="76" r="1.5" class="nose" />
+      <path d="M 586 80 Q 584 82 582 80" class="mouth" stroke-width="1" />
+      <!-- Worry mark -->
+      <circle cx="596" cy="62" r="1.5" class="alex-dark" />
+    </g>
+
+    <!-- Frame 4: move_walk (stride) -->
+    <g>
+      <rect x="640" y="76" width="64" height="64" class="bg" />
+      <rect x="648" y="116" width="8" height="12" rx="2" class="alex-main outline" />
+      <rect x="672" y="114" width="8" height="14" rx="2" class="alex-main outline" />
+      <rect x="646" y="88" width="40" height="28" rx="4" class="alex-main outline" />
+      <ellipse cx="666" cy="100" rx="14" ry="12" class="alex-belly" />
+      <circle cx="666" cy="72" r="14" class="alex-main outline" />
+      <circle cx="658" cy="68" r="2.5" class="eye" />
+      <circle cx="674" cy="68" r="2.5" class="eye" />
+      <circle cx="666" cy="74" r="2" class="nose" />
+      <path d="M 682 96 Q 692 92 696 104" class="alex-main outline" stroke-width="5" fill="none" />
+    </g>
+  </g>
+
+  <!-- ===== AGENT 3: JORDAN (Pink) ===== -->
+  <g id="jordan-sheet">
+    <text x="784" y="60">JORDAN (Pink) - Styling/UX</text>
+    
+    <!-- Frame 1: idle_default (elegant) -->
+    <g>
+      <rect x="784" y="76" width="64" height="64" class="bg" />
+      <rect x="792" y="116" width="8" height="12" rx="2" class="jordan-main outline" />
+      <rect x="816" y="116" width="8" height="12" rx="2" class="jordan-main outline" />
+      <rect x="790" y="88" width="40" height="28" rx="4" class="jordan-main outline" />
+      <ellipse cx="810" cy="100" rx="14" ry="12" class="jordan-belly" />
+      <circle cx="810" cy="72" r="14" class="jordan-main outline" />
+      <rect x="796" y="50" width="8" height="14" rx="2" class="jordan-main outline" />
+      <rect x="818" y="50" width="8" height="14" rx="2" class="jordan-main outline" />
+      <rect x="797" y="54" width="6" height="8" rx="1" class="jordan-light" />
+      <rect x="819" y="54" width="6" height="8" rx="1" class="jordan-light" />
+      <circle cx="802" cy="68" r="2.5" class="eye" />
+      <circle cx="818" cy="68" r="2.5" class="eye" />
+      <circle cx="810" cy="74" r="2" class="nose" />
+      <path d="M 810 78 Q 808 80 806 78" class="mouth" />
+      <rect x="792" y="108" width="8" height="12" rx="2" class="jordan-main outline" />
+      <rect x="816" y="108" width="8" height="12" rx="2" class="jordan-main outline" />
+      <path d="M 826 96 Q 836 92 838 104" class="jordan-main outline" stroke-width="5" fill="none" />
+    </g>
+
+    <!-- Additional frames omitted for brevity (same pattern as above, different colors) -->
+    <!-- In production, all 17 frames per agent -->
+  </g>
+
+  <!-- Quick reference for remaining agents (Milo, Riley, Casey, Sam, Quinn) -->
+  <!-- Pattern repeats with agent-specific colors and subtle personality variations -->
+  
+  <text x="16" y="220" class="frame-label">Production Note: Full 17 frames per agent. Shown: Sample frames demonstrating style consistency and personality.</text>
+  <text x="16" y="240" class="frame-label">All agents use same animation states: idle_default(3) + idle_dook(3) + move_walk(4) + working_desk(2) + celebrate_dook(3) + anxious_pace(2)</text>
+
+</svg>

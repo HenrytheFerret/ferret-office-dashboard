@@ -1,0 +1,55 @@
+{
+  "sprites": {
+    "kevin-sprite.png": {
+      "description": "Kevin agent sprite sheet (192x192)",
+      "frames": 17,
+      "frameSize": "32x32",
+      "animations": [
+        "idle_default",
+        "idle_dook",
+        "move_walk",
+        "working_desk",
+        "celebrate_dook",
+        "anxious_pace"
+      ]
+    },
+    "alex-sprite.png": {
+      "description": "Alex agent sprite sheet (192x192)",
+      "frames": 17,
+      "frameSize": "32x32",
+      "animations": [
+        "idle_default",
+        "idle_dook",
+        "move_walk",
+        "working_desk",
+        "celebrate_dook",
+        "anxious_pace"
+      ]
+    }
+  },
+  "tileset": {
+    "office_tileset.png": {
+      "description": "Office environment tileset (256x16)",
+      "tiles": 16,
+      "tileSize": "16x16",
+      "tileTypes": [
+        "wall",
+        "floor",
+        "desk_1",
+        "desk_2",
+        "desk_3",
+        "chair_1",
+        "chair_2",
+        "kitchen",
+        "kitchen_2",
+        "meeting",
+        "meeting_2",
+        "storage",
+        "door",
+        "plant",
+        "plant_2",
+        "light"
+      ]
+    }
+  }
+}

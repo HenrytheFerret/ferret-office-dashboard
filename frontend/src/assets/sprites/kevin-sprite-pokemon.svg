@@ -1,0 +1,267 @@
+<svg width="384" height="144" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 144">
+  <defs>
+    <style>
+      .bg { fill: #1e1e2e; }
+      .outline { stroke: #11111b; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .kevin-main { fill: #7aa2f7; }
+      .kevin-dark { fill: #3d59a1; }
+      .kevin-light { fill: #cdd6f4; }
+      .kevin-belly { fill: #f2d5cf; }
+      .eye { fill: #11111b; }
+      .eye-shine { fill: #ffffff; }
+      .nose { fill: #f9e2af; }
+      .mouth { fill: none; stroke: #11111b; stroke-width: 1; stroke-linecap: round; }
+      .label { font-family: monospace; font-size: 9px; fill: #a6adc8; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="6" y="14" class="label" font-size="11" font-weight="bold">KEVIN (Blue) - Tech Lead - Retro Pokémon Style</text>
+
+  <!-- ROW 1: idle_default (3 frames) + idle_dook (3 frames) -->
+
+  <!-- Frame 0: idle_default - Neutral -->
+  <g>
+    <rect x="0" y="20" width="64" height="64" class="bg" />
+    <rect x="8" y="60" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="32" y="60" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="6" y="36" width="40" height="26" rx="4" class="kevin-main outline" />
+    <ellipse cx="26" cy="47" rx="14" ry="11" class="kevin-belly" />
+    <circle cx="26" cy="18" r="14" class="kevin-main outline" />
+    <rect x="12" y="2" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="34" y="2" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="13" y="6" width="6" height="7" rx="1" class="kevin-light" />
+    <rect x="35" y="6" width="6" height="7" rx="1" class="kevin-light" />
+    <circle cx="18" cy="14" r="2.5" class="eye" />
+    <circle cx="34" cy="14" r="2.5" class="eye" />
+    <circle cx="19" cy="12" r="0.9" class="eye-shine" />
+    <circle cx="35" cy="12" r="0.9" class="eye-shine" />
+    <circle cx="26" cy="20" r="2" class="nose" />
+    <path d="M 26 24 Q 23 26 20 24" class="mouth" />
+    <rect x="8" y="52" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="32" y="52" width="8" height="12" rx="2" class="kevin-main outline" />
+    <path d="M 42 42 Q 52 38 54 50" class="kevin-main outline" stroke-width="5" fill="none" />
+    <!-- Headset -->
+    <circle cx="26" cy="4" r="3" class="kevin-dark" />
+    <line x1="20" y1="4" x2="14" y2="4" class="outline" stroke-width="1.5" />
+    <text x="4" y="130" class="label" font-size="8">0: idle_default</text>
+  </g>
+
+  <!-- Frame 1: idle_default - Bob up -->
+  <g>
+    <rect x="64" y="20" width="64" height="64" class="bg" />
+    <rect x="72" y="58" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="96" y="58" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="70" y="34" width="40" height="26" rx="4" class="kevin-main outline" />
+    <ellipse cx="90" cy="45" rx="14" ry="11" class="kevin-belly" />
+    <circle cx="90" cy="16" r="14" class="kevin-main outline" />
+    <rect x="76" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="98" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="77" y="4" width="6" height="7" rx="1" class="kevin-light" />
+    <rect x="99" y="4" width="6" height="7" rx="1" class="kevin-light" />
+    <circle cx="82" cy="12" r="2.8" class="eye" />
+    <circle cx="98" cy="12" r="2.8" class="eye" />
+    <circle cx="83" cy="10" r="1" class="eye-shine" />
+    <circle cx="99" cy="10" r="1" class="eye-shine" />
+    <circle cx="90" cy="18" r="2" class="nose" />
+    <path d="M 90 22 Q 88 24 86 22" class="mouth" />
+    <path d="M 106 40 Q 116 36 118 48" class="kevin-main outline" stroke-width="5" fill="none" />
+    <!-- Headset (lifted) -->
+    <circle cx="90" cy="2" r="3" class="kevin-dark" />
+    <line x1="84" y1="2" x2="78" y2="2" class="outline" stroke-width="1.5" />
+  </g>
+
+  <!-- Frame 2: idle_default - Return -->
+  <g>
+    <rect x="128" y="20" width="64" height="64" class="bg" />
+    <rect x="136" y="60" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="160" y="60" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="134" y="36" width="40" height="26" rx="4" class="kevin-main outline" />
+    <ellipse cx="154" cy="47" rx="14" ry="11" class="kevin-belly" />
+    <circle cx="154" cy="18" r="14" class="kevin-main outline" />
+    <rect x="140" y="2" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="162" y="2" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="141" y="6" width="6" height="7" rx="1" class="kevin-light" />
+    <rect x="163" y="6" width="6" height="7" rx="1" class="kevin-light" />
+    <circle cx="146" cy="14" r="2.5" class="eye" />
+    <circle cx="162" cy="14" r="2.5" class="eye" />
+    <circle cx="147" cy="12" r="0.9" class="eye-shine" />
+    <circle cx="163" cy="12" r="0.9" class="eye-shine" />
+    <circle cx="154" cy="20" r="2" class="nose" />
+    <path d="M 154 24 Q 151 26 148 24" class="mouth" />
+    <path d="M 170 42 Q 180 38 182 50" class="kevin-main outline" stroke-width="5" fill="none" />
+    <!-- Headset -->
+    <circle cx="154" cy="4" r="3" class="kevin-dark" />
+    <line x1="148" y1="4" x2="142" y2="4" class="outline" stroke-width="1.5" />
+  </g>
+
+  <!-- Frame 3: idle_dook - Bounce down -->
+  <g>
+    <rect x="192" y="20" width="64" height="64" class="bg" />
+    <rect x="200" y="62" width="8" height="10" rx="2" class="kevin-main outline" />
+    <rect x="224" y="62" width="8" height="10" rx="2" class="kevin-main outline" />
+    <rect x="198" y="38" width="40" height="26" rx="4" class="kevin-main outline" />
+    <ellipse cx="218" cy="49" rx="14" ry="11" class="kevin-belly" />
+    <circle cx="218" cy="20" r="14" class="kevin-main outline" />
+    <rect x="204" y="4" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="226" y="4" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="205" y="8" width="6" height="7" rx="1" class="kevin-light" />
+    <rect x="227" y="8" width="6" height="7" rx="1" class="kevin-light" />
+    <circle cx="210" cy="16" r="3" class="eye" />
+    <circle cx="226" cy="16" r="3" class="eye" />
+    <circle cx="211" cy="14" r="1.2" class="eye-shine" />
+    <circle cx="227" cy="14" r="1.2" class="eye-shine" />
+    <circle cx="218" cy="22" r="2" class="nose" />
+    <path d="M 218 26 Q 216 29 214 26" class="mouth" stroke-width="1.2" />
+    <!-- Big smile -->
+    <circle cx="200" cy="68" r="1.5" class="kevin-dark" />
+    <circle cx="236" cy="68" r="1.5" class="kevin-dark" />
+  </g>
+
+  <!-- Frame 4: idle_dook - Bounce peak -->
+  <g>
+    <rect x="256" y="20" width="64" height="64" class="bg" />
+    <rect x="264" y="50" width="8" height="10" rx="2" class="kevin-main outline" />
+    <rect x="288" y="50" width="8" height="10" rx="2" class="kevin-main outline" />
+    <rect x="262" y="26" width="40" height="26" rx="4" class="kevin-main outline" />
+    <ellipse cx="282" cy="37" rx="14" ry="11" class="kevin-belly" />
+    <circle cx="282" cy="8" r="14" class="kevin-main outline" />
+    <rect x="268" y="-8" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="290" y="-8" width="8" height="12" rx="2" class="kevin-main outline" />
+    <circle cx="274" cy="4" r="3.2" class="eye" />
+    <circle cx="290" cy="4" r="3.2" class="eye" />
+    <circle cx="275" cy="2" r="1.3" class="eye-shine" />
+    <circle cx="291" cy="2" r="1.3" class="eye-shine" />
+    <circle cx="282" cy="10" r="2.2" class="nose" />
+    <path d="M 282 14 Q 280 18 278 14" class="mouth" stroke-width="1.5" />
+    <!-- Sparkles -->
+    <circle cx="255" cy="10" r="1.5" class="kevin-light" />
+    <circle cx="309" cy="15" r="1.5" class="kevin-light" />
+  </g>
+
+  <!-- Frame 5: idle_dook - Bounce settling -->
+  <g>
+    <rect x="320" y="20" width="64" height="64" class="bg" />
+    <rect x="328" y="60" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="352" y="60" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="326" y="36" width="40" height="26" rx="4" class="kevin-main outline" />
+    <ellipse cx="346" cy="47" rx="14" ry="11" class="kevin-belly" />
+    <circle cx="346" cy="18" r="14" class="kevin-main outline" />
+    <rect x="332" y="2" width="8" height="12" rx="2" class="kevin-main outline" />
+    <rect x="354" y="2" width="8" height="12" rx="2" class="kevin-main outline" />
+    <circle cx="338" cy="14" r="2.8" class="eye" />
+    <circle cx="354" cy="14" r="2.8" class="eye" />
+    <circle cx="346" cy="20" r="2" class="nose" />
+    <path d="M 346 24 Q 344 26 342 24" class="mouth" />
+  </g>
+
+  <!-- ROW 2: move_walk (4 frames) + working_desk (2 frames) -->
+
+  <!-- Frame 6: move_walk - Left stride -->
+  <g>
+    <rect x="0" y="84" width="64" height="64" class="bg" />
+    <rect x="6" y="124" width="8" height="14" rx="2" class="kevin-main outline" />
+    <rect x="32" y="122" width="8" height="16" rx="2" class="kevin-main outline" />
+    <rect x="4" y="44" width="40" height="26" rx="4" class="kevin-main outline" />
+    <ellipse cx="24" cy="55" rx="14" ry="11" class="kevin-belly" />
+    <circle cx="24" cy="26" r="14" class="kevin-main outline" />
+    <circle cx="18" cy="22" r="2.5" class="eye" />
+    <circle cx="30" cy="22" r="2.5" class="eye" />
+    <circle cx="24" cy="28" r="2" class="nose" />
+    <path d="M 24 32 Q 22 34 20 32" class="mouth" />
+    <path d="M 40 50 Q 50 46 52 58" class="kevin-main outline" stroke-width="5" fill="none" />
+  </g>
+
+  <!-- Frame 7: move_walk - Neutral stride -->
+  <g>
+    <rect x="64" y="84" width="64" height="64" class="bg" />
+    <rect x="70" y="124" width="8" height="14" rx="2" class="kevin-main outline" />
+    <rect x="96" y="124" width="8" height="14" rx="2" class="kevin-main outline" />
+    <rect x="68" y="44" width="40" height="26" rx="4" class="kevin-main outline" />
+    <ellipse cx="88" cy="55" rx="14" ry="11" class="kevin-belly" />
+    <circle cx="88" cy="26" r="14" class="kevin-main outline" />
+    <circle cx="82" cy="22" r="2.5" class="eye" />
+    <circle cx="94" cy="22" r="2.5" class="eye" />
+    <circle cx="88" cy="28" r="2" class="nose" />
+    <path d="M 88 32 Q 86 34 84 32" class="mouth" />
+    <path d="M 104 50 Q 114 46 116 58" class="kevin-main outline" stroke-width="5" fill="none" />
+  </g>
+
+  <!-- Frame 8: move_walk - Right stride -->
+  <g>
+    <rect x="128" y="84" width="64" height="64" class="bg" />
+    <rect x="134" y="122" width="8" height="16" rx="2" class="kevin-main outline" />
+    <rect x="160" y="124" width="8" height="14" rx="2" class="kevin-main outline" />
+    <rect x="132" y="44" width="40" height="26" rx="4" class="kevin-main outline" />
+    <ellipse cx="152" cy="55" rx="14" ry="11" class="kevin-belly" />
+    <circle cx="152" cy="26" r="14" class="kevin-main outline" />
+    <circle cx="146" cy="22" r="2.5" class="eye" />
+    <circle cx="158" cy="22" r="2.5" class="eye" />
+    <circle cx="152" cy="28" r="2" class="nose" />
+    <path d="M 152 32 Q 150 34 148 32" class="mouth" />
+    <path d="M 168 50 Q 178 46 180 58" class="kevin-main outline" stroke-width="5" fill="none" />
+  </g>
+
+  <!-- Frame 9: move_walk - Return neutral -->
+  <g>
+    <rect x="192" y="84" width="64" height="64" class="bg" />
+    <rect x="198" y="124" width="8" height="14" rx="2" class="kevin-main outline" />
+    <rect x="224" y="124" width="8" height="14" rx="2" class="kevin-main outline" />
+    <rect x="196" y="44" width="40" height="26" rx="4" class="kevin-main outline" />
+    <ellipse cx="216" cy="55" rx="14" ry="11" class="kevin-belly" />
+    <circle cx="216" cy="26" r="14" class="kevin-main outline" />
+    <circle cx="210" cy="22" r="2.5" class="eye" />
+    <circle cx="222" cy="22" r="2.5" class="eye" />
+    <circle cx="216" cy="28" r="2" class="nose" />
+    <path d="M 216 32 Q 214 34 212 32" class="mouth" />
+    <path d="M 232 50 Q 242 46 244 58" class="kevin-main outline" stroke-width="5" fill="none" />
+  </g>
+
+  <!-- Frame 10: working_desk - Focused -->
+  <g>
+    <rect x="256" y="84" width="64" height="64" class="bg" />
+    <!-- Desk -->
+    <rect x="268" y="128" width="48" height="10" rx="2" class="kevin-dark outline" fill="#6b513d" />
+    <rect x="266" y="116" width="40" height="20" rx="3" class="kevin-main outline" />
+    <circle cx="286" cy="96" r="13" class="kevin-main outline" />
+    <rect x="272" y="72" width="7" height="11" rx="2" class="kevin-main outline" />
+    <rect x="293" y="72" width="7" height="11" rx="2" class="kevin-main outline" />
+    <circle cx="280" cy="92" r="2" class="eye" />
+    <circle cx="292" cy="92" r="2" class="eye" />
+    <circle cx="286" cy="98" r="1.5" class="nose" />
+    <path d="M 286 102 Q 284 104 282 102" class="mouth" stroke-width="1" />
+    <rect x="268" y="134" width="8" height="8" rx="1" class="kevin-main outline" />
+    <rect x="294" y="134" width="8" height="8" rx="1" class="kevin-main outline" />
+    <path d="M 304 118 Q 312 116 316 126" class="kevin-main outline" stroke-width="4" fill="none" />
+    <!-- Computer on desk -->
+    <rect x="272" y="120" width="28" height="8" rx="1" fill="#89b4fa" opacity="0.8" />
+    <!-- Headset on head -->
+    <circle cx="286" cy="74" r="2.5" class="kevin-dark" />
+    <line x1="282" y1="74" x2="277" y2="74" class="outline" stroke-width="1.5" />
+  </g>
+
+  <!-- Frame 11: working_desk - Typing -->
+  <g>
+    <rect x="320" y="84" width="64" height="64" class="bg" />
+    <!-- Desk -->
+    <rect x="332" y="128" width="48" height="10" rx="2" class="kevin-dark outline" fill="#6b513d" />
+    <rect x="330" y="116" width="40" height="20" rx="3" class="kevin-main outline" />
+    <circle cx="350" cy="96" r="13" class="kevin-main outline" />
+    <rect x="336" y="72" width="7" height="11" rx="2" class="kevin-main outline" />
+    <rect x="357" y="72" width="7" height="11" rx="2" class="kevin-main outline" />
+    <circle cx="344" cy="92" r="2" class="eye" />
+    <circle cx="356" cy="92" r="2" class="eye" />
+    <circle cx="350" cy="98" r="1.5" class="nose" />
+    <path d="M 350 102 Q 348 104 346 102" class="mouth" stroke-width="1" />
+    <!-- Typing fingers -->
+    <rect x="332" y="136" width="6" height="6" rx="0.5" class="kevin-main outline" stroke-width="1" />
+    <rect x="344" y="136" width="6" height="6" rx="0.5" class="kevin-main outline" stroke-width="1" />
+    <rect x="356" y="136" width="6" height="6" rx="0.5" class="kevin-main outline" stroke-width="1" />
+    <!-- Computer -->
+    <rect x="336" y="120" width="28" height="8" rx="1" fill="#89b4fa" opacity="0.8" />
+    <!-- Headset -->
+    <circle cx="350" cy="74" r="2.5" class="kevin-dark" />
+    <line x1="346" y1="74" x2="341" y2="74" class="outline" stroke-width="1.5" />
+  </g>
+
+</svg>

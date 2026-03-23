@@ -1,0 +1,163 @@
+# TASK-012 Production Log - Retro Pokémon Style Ferrets
+
+**Started:** 2026-03-23 05:46 GMT+1  
+**Tech Lead:** Kevin  
+**Designer:** Jordan
+
+## Production Status
+
+### Agent Queue:
+- [ ] Kevin (Blue) - Tech Lead - Headset accessory - Priority 1
+- [ ] Alex (Orange) - Frontend Dev - Keyboard accessory - Priority 1
+- [ ] Jordan (Pink) - Styling/UX - Paintbrush accessory - Priority 2
+- [ ] Milo (Teal) - Backend - Coffee cup accessory - Priority 2
+- [ ] Riley (Purple) - Database - Glasses accessory - Priority 2
+- [ ] Casey (Yellow) - QA - Magnifying glass accessory - Priority 3
+- [ ] Sam (Cyan) - Research - Book accessory - Priority 3
+- [ ] Quinn (Pink-Red) - PM - Clipboard accessory - Priority 3
+
+## SVG Specifications
+
+**Per Agent File:** `{agent-id}-sprite-pokemon.svg`
+- **Canvas:** 384×96 pixels (6 frames wide × 64px = 384px)
+- **Rows:** ~1.5 rows (with spacing for labels)
+- **Frame size:** 64×64 pixels each
+- **Outline:** 2px black stroke, rounded joins
+- **Animation frames:** 17 total (same structure for all agents)
+
+**Naming Convention for Kevin's batch script:**
+```
+kevin-sprite-pokemon.svg
+alex-sprite-pokemon.svg
+jordan-sprite-pokemon.svg
+milo-sprite-pokemon.svg
+riley-sprite-pokemon.svg
+casey-sprite-pokemon.svg
+sam-sprite-pokemon.svg
+quinn-sprite-pokemon.svg
+```
+
+## Animation Frame Breakdown (All Agents)
+
+### Columns 1-3: idle_default (standing, happy)
+- Frame 0: Neutral upright, forward eyes
+- Frame 1: Slight lift (breathing effect)
+- Frame 2: Back to neutral
+
+### Columns 4-6: idle_dook (playful bounce)
+- Frame 3: Down position, ears up, big smile
+- Frame 4: Peak bounce, wide eyes
+- Frame 5: Settling back down
+
+### Row 2, Columns 1-4: move_walk (walking stride)
+- Frame 6: Left leg forward, lean left
+- Frame 7: Neutral stride
+- Frame 8: Right leg forward, lean right
+- Frame 9: Back to neutral
+
+### Row 2, Columns 5-6: working_desk (focused)
+- Frame 10: Hunched, eyes down, concentrated
+- Frame 11: Minimal shift (typing motion)
+
+### Row 3, Columns 1-3: celebrate_dook (jumping, celebrating)
+- Frame 12: Jump up, arms/paws raised
+- Frame 13: Peak jump, big smile, sparkles
+- Frame 14: Landing still happy
+
+### Row 3, Columns 4-5: anxious_pace (worried pacing)
+- Frame 15: Left step, worried, ears back
+- Frame 16: Right step, still worried
+
+## Color Palettes (Finalized)
+
+```
+Kevin (Blue):      Primary #7aa2f7 | Dark #3d59a1 | Light #cdd6f4 | Belly #f2d5cf
+Alex (Orange):     Primary #f5a97f | Dark #c65d32 | Light #f9e2af | Belly #fde4d3
+Jordan (Pink):     Primary #f5bde6 | Dark #c678dd | Light #f2cdcd | Belly #fef5f7
+Milo (Teal):       Primary #94e2d5 | Dark #2d8f74 | Light #d9f0d8 | Belly #e8f8f5
+Riley (Purple):    Primary #cba6f7 | Dark #8b5cf6 | Light #e9d5ff | Belly #f3e8ff
+Casey (Yellow):    Primary #f9e2af | Dark #d4a017 | Light #fef3c7 | Belly #fffacd
+Sam (Cyan):        Primary #89dceb | Dark #3a86a8 | Light #d6f4ff | Belly #e0f7ff
+Quinn (Pink-Red):  Primary #f38ba8 | Dark #be4b6c | Light #fad3dc | Belly #fce4ec
+```
+
+## Personality Quirks (Subtle Integration)
+
+| Agent | Quirk | Integration |
+|-------|-------|-------------|
+| **Kevin** | Headset | Tiny headset on head during working frames |
+| **Alex** | Keyboard | Keyboard visible on desk during working frames |
+| **Jordan** | Paintbrush | Holding paintbrush in paw during working/idle frames |
+| **Milo** | Coffee cup | Coffee cup on desk, occasional sip motion |
+| **Riley** | Glasses | Simple glasses on face (all frames) |
+| **Casey** | Magnifying glass | Holding in paw during anxious/working frames |
+| **Sam** | Book | Holding book in paw, especially during working frames |
+| **Quinn** | Clipboard | Clipboard in paw, takes notes (working frame animation) |
+
+## Asset Generation Rules
+
+**For smooth animation:**
+1. ✅ Each frame must be distinct (clear pose change)
+2. ✅ Eyes/mouth reflect animation state (happy→sad→worried)
+3. ✅ Tail animation (position/curve changes per frame)
+4. ✅ Posture communicates state (hunched=work, bouncing=celebrate, pacing=anxious)
+5. ✅ Accessories subtle but visible at 64×64
+
+**For visual consistency:**
+1. ✅ Same outline thickness (2px)
+2. ✅ Same eye/nose proportions per agent
+3. ✅ Belly patch always present (continuity)
+4. ✅ Ears always visible (personality indicator)
+5. ✅ Paws/feet visible in walking/working frames
+
+## Production Checklist
+
+### Per Agent:
+- [ ] All 17 frames created
+- [ ] Animation flows smoothly (no jarring transitions)
+- [ ] Personality quirk integrated subtly
+- [ ] Color palette applied consistently
+- [ ] Eyes expressive per state
+- [ ] Mouth/expression reflects animation
+- [ ] Posture reflects state
+- [ ] Tail animates naturally
+- [ ] Frame labels added (for debugging)
+- [ ] Quality review pass
+
+### Batch (After all SVGs):
+- [ ] All 8 SVGs created & saved
+- [ ] Naming convention verified (kevin-sprite-pokemon.svg, etc.)
+- [ ] Handed off to Kevin for PNG conversion
+- [ ] Atlas JSON generated by Kevin's script
+- [ ] Integration testing in OfficeScene-enhanced.js
+- [ ] Animation smoothness verified
+- [ ] Performance checked (no lag)
+
+## Timeline
+
+| Agent | Est. Start | Est. Completion | Status |
+|-------|-----------|-----------------|--------|
+| Kevin | 05:46 | 06:16 | In Progress |
+| Alex | 06:16 | 06:46 | Queued |
+| Jordan | 06:46 | 07:16 | Queued |
+| Milo | 07:16 | 07:46 | Queued |
+| Riley | 07:46 | 08:16 | Queued |
+| Casey | 08:16 | 08:46 | Queued |
+| Sam | 08:46 | 09:16 | Queued |
+| Quinn | 09:16 | 09:46 | Queued |
+| **All SVGs Ready** | — | **09:46** | — |
+| PNG Conversion (Kevin) | 09:46 | 10:16 | Pending |
+| **Ready for Integration** | — | **10:16** | — |
+
+---
+
+## Notes
+
+- Frame size: 64×64 is sweet spot for Pokémon-style detail + readable at 32×32 when scaled
+- Animation smoothness prioritized over extra detail (per Kevin's directive)
+- Each agent has personality expressed through design + quirks, not just color
+- SVGs use consistent styling for easy batching & conversion
+
+**Current Time: 05:46 GMT+1**  
+**Target Delivery: All SVGs by 09:46 GMT+1 (~4 hours)**
+

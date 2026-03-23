@@ -1,0 +1,82 @@
+[
+  {
+    "id": "kevin",
+    "name": "Kevin",
+    "spriteSheetKey": "kevin_spritesheet",
+    "initialPosition": { "x": 200, "y": 300 },
+    "deskPosition": { "x": 150, "y": 250 },
+    "idleAnimationKeys": ["idle_default", "idle_dook", "idle_flop"],
+    "hoardItemType": "sock",
+    "personalityTraits": ["digs_pits", "chases_tail"]
+  },
+  {
+    "id": "alex",
+    "name": "Alex",
+    "spriteSheetKey": "alex_spritesheet",
+    "initialPosition": { "x": 300, "y": 300 },
+    "deskPosition": { "x": 250, "y": 250 },
+    "idleAnimationKeys": ["idle_default", "idle_dook"],
+    "hoardItemType": "cable",
+    "personalityTraits": ["plays_with_tunnels"]
+  },
+  {
+    "id": "jordan",
+    "name": "Jordan",
+    "spriteSheetKey": "jordan_spritesheet",
+    "initialPosition": { "x": 400, "y": 300 },
+    "deskPosition": { "x": 350, "y": 250 },
+    "idleAnimationKeys": ["idle_default", "idle_dook"],
+    "hoardItemType": "paint_brush",
+    "personalityTraits": ["hoards_shiny"]
+  },
+  {
+    "id": "milo",
+    "name": "Milo",
+    "spriteSheetKey": "milo_spritesheet",
+    "initialPosition": { "x": 500, "y": 300 },
+    "deskPosition": { "x": 450, "y": 250 },
+    "idleAnimationKeys": ["idle_default", "idle_flop"],
+    "hoardItemType": "rubber_duck",
+    "personalityTraits": ["sleepy"]
+  },
+  {
+    "id": "riley",
+    "name": "Riley",
+    "spriteSheetKey": "riley_spritesheet",
+    "initialPosition": { "x": 600, "y": 300 },
+    "deskPosition": { "x": 550, "y": 250 },
+    "idleAnimationKeys": ["idle_default", "idle_dook"],
+    "hoardItemType": "database_icon",
+    "personalityTraits": ["organizes"]
+  },
+  {
+    "id": "casey",
+    "name": "Casey",
+    "spriteSheetKey": "casey_spritesheet",
+    "initialPosition": { "x": 700, "y": 300 },
+    "deskPosition": { "x": 650, "y": 250 },
+    "idleAnimationKeys": ["idle_default", "idle_dook"],
+    "hoardItemType": "bug_icon",
+    "personalityTraits": ["investigative"]
+  },
+  {
+    "id": "sam",
+    "name": "Sam",
+    "spriteSheetKey": "sam_spritesheet",
+    "initialPosition": { "x": 800, "y": 300 },
+    "deskPosition": { "x": 750, "y": 250 },
+    "idleAnimationKeys": ["idle_default", "idle_flop"],
+    "hoardItemType": "book",
+    "personalityTraits": ["researcher"]
+  },
+  {
+    "id": "quinn",
+    "name": "Quinn",
+    "spriteSheetKey": "quinn_spritesheet",
+    "initialPosition": { "x": 900, "y": 300 },
+    "deskPosition": { "x": 850, "y": 250 },
+    "idleAnimationKeys": ["idle_default", "idle_dook"],
+    "hoardItemType": "clipboard",
+    "personalityTraits": ["coordinator"]
+  }
+]

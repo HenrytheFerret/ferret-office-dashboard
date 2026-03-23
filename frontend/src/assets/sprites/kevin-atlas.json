@@ -1,0 +1,159 @@
+{
+  "textures": [
+    {
+      "image": "kevin-sprite.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 192,
+        "h": 192
+      },
+      "scale": 1,
+      "frames": [
+        {
+          "filename": "idle_default_0",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 0, "y": 0, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "idle_default_1",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 32, "y": 0, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "idle_default_2",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 64, "y": 0, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "idle_dook_0",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 96, "y": 0, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "idle_dook_1",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 128, "y": 0, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "idle_dook_2",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 160, "y": 0, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "move_walk_0",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 0, "y": 32, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "move_walk_1",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 32, "y": 32, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "move_walk_2",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 64, "y": 32, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "move_walk_3",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 96, "y": 32, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "working_desk_0",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 128, "y": 32, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "working_desk_1",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 160, "y": 32, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "celebrate_dook_0",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 0, "y": 64, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "celebrate_dook_1",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 32, "y": 64, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "celebrate_dook_2",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 64, "y": 64, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "anxious_pace_0",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 96, "y": 64, "w": 32, "h": 32 }
+        },
+        {
+          "filename": "anxious_pace_1",
+          "rotated": false,
+          "trimmed": false,
+          "sourceSize": { "w": 32, "h": 32 },
+          "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 32 },
+          "frame": { "x": 128, "y": 64, "w": 32, "h": 32 }
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "app": "Phaser Asset Pack Generator",
+    "version": "1.0",
+    "image": "kevin-sprite.png",
+    "format": "RGBA8888",
+    "size": { "w": 192, "h": 192 },
+    "scale": 1
+  }
+}
