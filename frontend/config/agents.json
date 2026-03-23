@@ -2,81 +2,89 @@
   {
     "id": "kevin",
     "name": "Kevin",
-    "spriteSheetKey": "kevin_spritesheet",
+    "spriteSheetKey": "kevin-sprite-pokemon",
     "initialPosition": { "x": 200, "y": 300 },
     "deskPosition": { "x": 150, "y": 250 },
     "idleAnimationKeys": ["idle_default", "idle_dook", "idle_flop"],
     "hoardItemType": "sock",
-    "personalityTraits": ["digs_pits", "chases_tail"]
+    "personalityTraits": ["digs_pits", "chases_tail"],
+    "meetingRoomPosition": { "x": 1080, "y": 150 }
   },
   {
     "id": "alex",
     "name": "Alex",
-    "spriteSheetKey": "alex_spritesheet",
+    "spriteSheetKey": "alex-sprite-pokemon",
     "initialPosition": { "x": 300, "y": 300 },
     "deskPosition": { "x": 250, "y": 250 },
     "idleAnimationKeys": ["idle_default", "idle_dook"],
     "hoardItemType": "cable",
-    "personalityTraits": ["plays_with_tunnels"]
+    "personalityTraits": ["plays_with_tunnels"],
+    "meetingRoomPosition": { "x": 1080, "y": 180 }
   },
   {
     "id": "jordan",
     "name": "Jordan",
-    "spriteSheetKey": "jordan_spritesheet",
+    "spriteSheetKey": "jordan-sprite-pokemon",
     "initialPosition": { "x": 400, "y": 300 },
     "deskPosition": { "x": 350, "y": 250 },
     "idleAnimationKeys": ["idle_default", "idle_dook"],
     "hoardItemType": "paint_brush",
-    "personalityTraits": ["hoards_shiny"]
+    "personalityTraits": ["hoards_shiny"],
+    "meetingRoomPosition": { "x": 1080, "y": 210 }
   },
   {
     "id": "milo",
     "name": "Milo",
-    "spriteSheetKey": "milo_spritesheet",
+    "spriteSheetKey": "milo-sprite-pokemon",
     "initialPosition": { "x": 500, "y": 300 },
     "deskPosition": { "x": 450, "y": 250 },
     "idleAnimationKeys": ["idle_default", "idle_flop"],
     "hoardItemType": "rubber_duck",
-    "personalityTraits": ["sleepy"]
+    "personalityTraits": ["sleepy"],
+    "meetingRoomPosition": { "x": 1080, "y": 240 }
   },
   {
     "id": "riley",
     "name": "Riley",
-    "spriteSheetKey": "riley_spritesheet",
+    "spriteSheetKey": "riley-sprite-pokemon",
     "initialPosition": { "x": 600, "y": 300 },
     "deskPosition": { "x": 550, "y": 250 },
     "idleAnimationKeys": ["idle_default", "idle_dook"],
     "hoardItemType": "database_icon",
-    "personalityTraits": ["organizes"]
+    "personalityTraits": ["organizes"],
+    "meetingRoomPosition": { "x": 1080, "y": 270 }
   },
   {
     "id": "casey",
     "name": "Casey",
-    "spriteSheetKey": "casey_spritesheet",
+    "spriteSheetKey": "casey-sprite-pokemon",
     "initialPosition": { "x": 700, "y": 300 },
     "deskPosition": { "x": 650, "y": 250 },
     "idleAnimationKeys": ["idle_default", "idle_dook"],
     "hoardItemType": "bug_icon",
-    "personalityTraits": ["investigative"]
+    "personalityTraits": ["investigative"],
+    "meetingRoomPosition": { "x": 1080, "y": 300 }
   },
   {
     "id": "sam",
     "name": "Sam",
-    "spriteSheetKey": "sam_spritesheet",
+    "spriteSheetKey": "sam-sprite-pokemon",
     "initialPosition": { "x": 800, "y": 300 },
     "deskPosition": { "x": 750, "y": 250 },
     "idleAnimationKeys": ["idle_default", "idle_flop"],
     "hoardItemType": "book",
-    "personalityTraits": ["researcher"]
+    "personalityTraits": ["researcher"],
+    "meetingRoomPosition": { "x": 1080, "y": 330 }
   },
   {
     "id": "quinn",
     "name": "Quinn",
-    "spriteSheetKey": "quinn_spritesheet",
+    "spriteSheetKey": "quinn-sprite-pokemon",
     "initialPosition": { "x": 900, "y": 300 },
     "deskPosition": { "x": 850, "y": 250 },
     "idleAnimationKeys": ["idle_default", "idle_dook"],
     "hoardItemType": "clipboard",
-    "personalityTraits": ["coordinator"]
+    "personalityTraits": ["coordinator"],
+    "meetingRoomPosition": { "x": 1080, "y": 360 }
   }
 ]

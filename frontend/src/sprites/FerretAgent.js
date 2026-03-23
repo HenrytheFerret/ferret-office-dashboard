@@ -30,41 +30,42 @@ export default class FerretAgent extends Phaser.GameObjects.Container {
     this.moveTween = null;
     this.bobTween = null;
 
-    this.shadow = scene.add.ellipse(0, 13, 22, 8, 0x000000, 0.22);
+    this.shadow = scene.add.ellipse(0, 20, 32, 12, 0x000000, 0.22); // Adjusted for larger sprite
     this.shadow.setDepth(0);
 
-    this.sprite = scene.add.sprite(0, 0, `${this.agentId}-idle_default-0`);
-    this.sprite.setOrigin(0.5, 0.72);
+    // Initialize with the first frame of the default idle animation from the atlas
+    this.sprite = scene.add.sprite(0, 0, this.config.spriteSheetKey, `${this.agentId}_frame_0`);
+    this.sprite.setOrigin(0.5, 0.75); // Adjusted origin for 64x64 pixel art frames
     this.sprite.setDepth(1);
 
-    this.statusDot = scene.add.circle(14, -16, 4, STATUS_COLORS.idle, 1);
+    this.statusDot = scene.add.circle(20, -28, 6, STATUS_COLORS.idle, 1); // Adjusted position and size
     this.statusDot.setStrokeStyle(2, 0x11111b, 0.8);
     this.statusDot.setDepth(3);
 
-    this.nameplate = scene.add.text(0, 20, config.name, {
+    this.nameplate = scene.add.text(0, 30, config.name, { // Adjusted position
       fontFamily: 'Inter, system-ui, sans-serif',
-      fontSize: '11px',
+      fontSize: '16px', // Adjusted font size
       color: '#f5e0dc',
       backgroundColor: '#313244',
-      padding: { x: 6, y: 2 },
+      padding: { x: 8, y: 3 }, // Adjusted padding
       align: 'center',
     }).setOrigin(0.5, 0);
     this.nameplate.setDepth(3);
 
-    this.taskText = scene.add.text(0, -28, '', {
+    this.taskText = scene.add.text(0, -40, '', { // Adjusted position
       fontFamily: 'Inter, system-ui, sans-serif',
-      fontSize: '9px',
+      fontSize: '12px', // Adjusted font size
       color: '#cdd6f4',
       backgroundColor: '#181825',
-      padding: { x: 5, y: 2 },
-      wordWrap: { width: 120, useAdvancedWrap: true },
+      padding: { x: 6, y: 3 }, // Adjusted padding
+      wordWrap: { width: 150, useAdvancedWrap: true }, // Adjusted width
       align: 'center',
     }).setOrigin(0.5, 1);
     this.taskText.setDepth(3);
     this.taskText.setVisible(false);
 
     this.add([this.shadow, this.sprite, this.statusDot, this.nameplate, this.taskText]);
-    this.setSize(48, 56);
+    this.setSize(64, 72); // Adjusted container size
     this.setDepth(10 + Math.round(this.y));
 
     scene.add.existing(this);
@@ -80,6 +81,7 @@ export default class FerretAgent extends Phaser.GameObjects.Container {
   playAnimation(name) {
     const key = `${this.agentId}-${name}`;
     if (!this.scene.anims.exists(key)) {
+      console.warn(`Animation key ${key} does not exist for agent ${this.agentId}`);
       return;
     }
 
@@ -94,7 +96,7 @@ export default class FerretAgent extends Phaser.GameObjects.Container {
 
     this.bobTween = this.scene.tweens.add({
       targets: this.sprite,
-      y: { from: 0, to: -2 },
+      y: { from: 0, to: -4 }, // Adjusted bob height for larger sprite
       duration: 900,
       yoyo: true,
       repeat: -1,
@@ -179,8 +181,8 @@ export default class FerretAgent extends Phaser.GameObjects.Container {
   pulseCelebrate() {
     this.scene.tweens.add({
       targets: [this.sprite, this.shadow],
-      scaleX: 1.08,
-      scaleY: 1.08,
+      scaleX: 1.12,
+      scaleY: 1.12,
       duration: 180,
       yoyo: true,
       repeat: 2,
@@ -192,8 +194,13 @@ export default class FerretAgent extends Phaser.GameObjects.Container {
     this.setDepth(10 + Math.round(this.y));
     if (this.currentStatus === 'celebrating' && !this.moveTween) {
       this.pulseCelebrate();
-      this.currentStatus = 'idle';
-      this.applyStatusVisuals();
+      // To prevent celebration loop, reset status after pulse completes
+      this.scene.time.delayedCall(180 * 2 * 3 + 100, () => { // duration * yoyo * repeat + buffer
+        if (this.currentStatus === 'celebrating') {
+          this.currentStatus = 'idle';
+          this.applyStatusVisuals();
+        }
+      });
     }
   }
 }
