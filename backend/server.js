@@ -4,8 +4,11 @@ const chokidar = require('chokidar');
 const path = require('path');
 const { parseTasks } = require('./utils/tasksParser');
 
-const WS_PORT = 8080;
-const TASKS_FILE_PATH = path.resolve(__dirname, '../../TASKS.md');
+const WS_PORT = process.env.WS_PORT || 8080;
+const TASKS_FILE_PATH = process.env.TASKS_FILE_PATH || path.resolve(__dirname, '../../TASKS.md');
+
+console.log(`Monitoring TASKS.md at: ${TASKS_FILE_PATH}`);
+console.log(`Set TASKS_FILE_PATH env var to use a different location.`);
 
 const wss = new WebSocket.Server({ port: WS_PORT }, () => {
     console.log(`WebSocket server started on port ${WS_PORT}`);

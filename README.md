@@ -41,6 +41,23 @@ npm run dev
 
 Open `http://localhost:5173` in your browser.
 
+## Configuration
+
+The backend looks for `TASKS.md` relative to its parent directory by default. If your `TASKS.md` is elsewhere, set the `TASKS_FILE_PATH` environment variable:
+
+```bash
+# Linux/macOS
+export TASKS_FILE_PATH="/path/to/your/TASKS.md"
+
+# Windows (PowerShell)
+$env:TASKS_FILE_PATH = "C:\path\to\your\TASKS.md"
+
+# Or when starting the server
+TASKS_FILE_PATH=/path/to/TASKS.md npm start
+```
+
+The backend will log the path it’s monitoring on startup.
+
 ## Development
 
 ### Adding a new agent
