@@ -6,18 +6,6 @@ import DayNightCycle from '../effects/DayNightCycle.js';
 
 const WS_URL = 'ws://localhost:4000';
 
-const PALETTES = {
-  kevin: { fur: 0x7aa2f7, accent: 0x3d59a1, ear: 0xcdd6f4 },
-  alex: { fur: 0xf5a97f, accent: 0xc65d32, ear: 0xf9e2af },
-  jordan: { fur: 0xf5bde6, accent: 0xc678dd, ear: 0xf2cdcd },
-  milo: { fur: 0x94e2d5, accent: 0x2d8f74, ear: 0xd9f0d8 },
-  riley: { fur: 0xcba6f7, accent: 0x8b5cf6, ear: 0xe9d5ff },
-  casey: { fur: 0xf9e2af, accent: 0xd4a017, ear: 0xfef3c7 },
-  sam: { fur: 0x89dceb, accent: 0x3a86a8, ear: 0xd6f4ff },
-  quinn: { fur: 0xf38ba8, accent: 0xbe4b6c, ear: 0xfad3dc },
-  default: { fur: 0xcdd6f4, accent: 0x6c7086, ear: 0xffffff },
-};
-
 const STATUS_PANEL_COPY = {
   connected: '🟢 Live backend connected',
   offline: '🟡 Demo mode — backend offline',
@@ -35,10 +23,40 @@ export default class OfficeScene extends Phaser.Scene {
     this.demoTimer = 0;
   }
 
-  preload() {}
+  preload() {
+    // Load all Pokémon-style sprite atlases and their corresponding PNGs
+    agentsConfig.forEach(agent => {
+      const spriteKey = agent.spriteSheetKey;
+      this.load.atlas(spriteKey, `assets/sprites/${agent.id}-sprite-pokemon.png`, `assets/sprites/${agent.id}-atlas-pokemon.json`);
+    });
+
+    // Load office tilemap assets
+    this.load.tilemapTiledJSON('office-map', 'assets/tilemaps/office_map.json');
+    // PNG tileset now available (converted from SVG)
+    this.load.image('office-tileset', 'assets/tilemaps/office_tileset.png');
+  }
+
+  _createTilemap() {
+    try {
+      const map = this.make.tilemap({ key: 'office-map' });
+      const tileset = map.addTilesetImage('office_tileset', 'office-tileset');
+      if (!tileset) {
+        console.warn('[OfficeScene] Tileset not found, skipping tilemap render');
+        return;
+      }
+      const layer = map.createLayer('Floor', tileset, 0, 0);
+      if (layer) {
+        layer.setScale(4); // scale up tilemap
+        this.tilemapLayer = layer;
+      }
+    } catch (e) {
+      console.error('[OfficeScene] Error creating tilemap:', e.message);
+    }
+  }
 
   create() {
-    this._createAgentTexturesAndAnimations();
+    this._createAgentAnimations(); // Use loaded atlases here
+    this._createTilemap();
     this._drawOfficeLayout();
     this._spawnAgentsFromConfig();
     this._setupUI();
@@ -59,34 +77,26 @@ export default class OfficeScene extends Phaser.Scene {
     }
   }
 
-  _createAgentTexturesAndAnimations() {
+  _createAgentAnimations() {
     agentsConfig.forEach((agent) => {
-      const palette = PALETTES[agent.id] || PALETTES.default;
-      const defs = [
-        ['idle_default', 3],
-        ['idle_dook', 3],
-        ['move_walk', 4],
-        ['working_desk', 2],
-        ['celebrate_dook', 3],
-        ['anxious_pace', 2],
+      const spriteKey = agent.spriteSheetKey; // e.g., 'kevin-sprite-pokemon'
+
+      const animationDefinitions = [
+        { key: 'idle_default', frames: ['kevin_frame_0', 'kevin_frame_1', 'kevin_frame_2'], frameRate: 5 },
+        { key: 'idle_dook', frames: ['kevin_frame_3', 'kevin_frame_4', 'kevin_frame_5'], frameRate: 5 },
+        { key: 'move_walk', frames: ['kevin_frame_6', 'kevin_frame_7', 'kevin_frame_8', 'kevin_frame_9'], frameRate: 8 },
+        { key: 'working_desk', frames: ['kevin_frame_10', 'kevin_frame_11'], frameRate: 4 },
+        { key: 'celebrate_dook', frames: ['kevin_frame_12', 'kevin_frame_13', 'kevin_frame_14'], frameRate: 6 },
+        { key: 'anxious_pace', frames: ['kevin_frame_15', 'kevin_frame_16'], frameRate: 4 },
       ];
 
-      defs.forEach(([anim, count]) => {
-        const frames = [];
-        for (let i = 0; i < count; i += 1) {
-          const key = `${agent.id}-${anim}-${i}`;
-          if (!this.textures.exists(key)) {
-            this._generateFerretFrame(key, palette, anim, i);
-          }
-          frames.push({ key });
-        }
-
-        const animKey = `${agent.id}-${anim}`;
+      animationDefinitions.forEach(animDef => {
+        const animKey = `${spriteKey}-${animDef.key}`;
         if (!this.anims.exists(animKey)) {
           this.anims.create({
             key: animKey,
-            frames,
-            frameRate: anim === 'move_walk' ? 8 : 5,
+            frames: animDef.frames.map(frame => ({ key: spriteKey, frame: frame.replace("kevin", agent.id) })), // Adjust frame names based on agent ID
+            frameRate: animDef.frameRate,
             repeat: -1,
           });
         }
@@ -94,75 +104,7 @@ export default class OfficeScene extends Phaser.Scene {
     });
   }
 
-  _generateFerretFrame(textureKey, palette, animation, frameIndex) {
-    const g = this.make.graphics({ x: 0, y: 0, add: false });
-    const fur = palette.fur;
-    const accent = palette.accent;
-    const ear = palette.ear;
-    const ox = 16;
-    const oy = 16;
-
-    const walkShift = animation === 'move_walk' ? [-2, 0, 2, 0][frameIndex] : 0;
-    const hopShift = (animation === 'idle_dook' || animation === 'celebrate_dook') ? (frameIndex % 2 === 0 ? -2 : 0) : 0;
-    const anxiousShift = animation === 'anxious_pace' ? (frameIndex % 2 === 0 ? -2 : 2) : 0;
-    const workShift = animation === 'working_desk' ? 2 : 0;
-    const dx = walkShift + anxiousShift;
-    const dy = hopShift + workShift;
-
-    const bodyX = ox + dx;
-    const bodyY = oy + 2 + dy;
-
-    g.fillStyle(0x000000, 0.18);
-    g.fillEllipse(16, 26, 16, 6);
-
-    if (animation === 'working_desk') {
-      g.fillStyle(0x6b513d, 1);
-      g.fillRoundedRect(5, 21, 22, 5, 2);
-      g.fillStyle(0x89b4fa, 0.9);
-      g.fillRoundedRect(8, 14, 16, 7, 2);
-    }
-
-    g.fillStyle(accent, 1);
-    g.fillEllipse(bodyX + 8, bodyY + 2, 10, 5); // tail
-
-    g.fillStyle(fur, 1);
-    g.fillEllipse(bodyX, bodyY + 2, 16, 11); // body
-    g.fillEllipse(bodyX + 1, bodyY - 7, 12, 10); // head
-
-    g.fillStyle(ear, 1);
-    g.fillTriangle(bodyX - 3, bodyY - 10, bodyX - 6, bodyY - 15, bodyX - 1, bodyY - 12);
-    g.fillTriangle(bodyX + 4, bodyY - 11, bodyX + 8, bodyY - 15, bodyX + 6, bodyY - 10);
-
-    g.fillStyle(0xf2d5cf, 1);
-    g.fillEllipse(bodyX + 2, bodyY + 4, 7, 5); // belly
-
-    g.fillStyle(0x11111b, 1);
-    g.fillCircle(bodyX - 1, bodyY - 8, 1.1);
-    g.fillCircle(bodyX + 4, bodyY - 8, 1.1);
-    g.fillCircle(bodyX + 1.5, bodyY - 5.5, 1);
-
-    g.lineStyle(2, accent, 1);
-    g.beginPath();
-    g.moveTo(bodyX - 4, bodyY + 8);
-    g.lineTo(bodyX - 2 + (walkShift ? 1 : 0), bodyY + 10);
-    g.moveTo(bodyX + 1, bodyY + 8);
-    g.lineTo(bodyX + 3 - (walkShift ? 1 : 0), bodyY + 10);
-    g.strokePath();
-
-    if (animation === 'celebrate_dook') {
-      g.lineStyle(1.5, 0xf9e2af, 1);
-      g.strokeLineShape(new Phaser.Geom.Line(bodyX - 8, bodyY - 18, bodyX - 10, bodyY - 22));
-      g.strokeLineShape(new Phaser.Geom.Line(bodyX + 9, bodyY - 18, bodyX + 11, bodyY - 22));
-    }
-
-    if (animation === 'anxious_pace') {
-      g.lineStyle(1, 0xcdd6f4, 0.9);
-      g.strokeArc(bodyX + 10, bodyY - 11, 3, Phaser.Math.DegToRad(180), Phaser.Math.DegToRad(360), false);
-    }
-
-    g.generateTexture(textureKey, 32, 32);
-    g.destroy();
-  }
+  // Removed _generateFerretFrame as it's no longer needed
 
   _drawOfficeLayout() {
     const { width, height } = this.scale;
@@ -178,7 +120,7 @@ export default class OfficeScene extends Phaser.Scene {
     glow.fillEllipse(width * 0.75, 110, 300, 140);
 
     const floor = this.add.graphics();
-    floor.fillStyle(0x1f2430, 1);
+    floor.fillStyle(0x1f2430, 0.3); // semi-transparent to show tilemap
     floor.fillRoundedRect(36, 72, width - 72, height - 128, 24);
     floor.lineStyle(2, 0x313244, 1);
     floor.strokeRoundedRect(36, 72, width - 72, height - 128, 24);
